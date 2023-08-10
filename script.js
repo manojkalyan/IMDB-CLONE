@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (searchTerm !== "") {
             // Construct the API URL for searching movies
             const apiKey = "4ef13bc";
-            const apiUrl = `http://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`;
+            const apiUrl = `https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`;
 
             // Fetch movie data from the API
             fetch(apiUrl)
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Fetch detailed movie data using IMDb ID
             const movieId = movieElement.getAttribute("data-id");
             const apiKey = "4ef13bc";
-            const apiUrl = `http://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`;
+            const apiUrl = `https://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`;
 
             // Fetch movie details and display them
             fetch(apiUrl)
