@@ -1,0 +1,340 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply general styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    /* Set background gradient */
+    background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    margin: 0;
+}
+
+/* Styling for the main content container */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Styling for the header section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color:linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the logo */
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Styling for the search form */
+.search-form {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Styling for the search input */
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+}
+
+/* Styling for the search input on hover */
+.search-input:hover {
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.8);
+}
+
+/* Styling for the search button */
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Styling for the search button on hover */
+.search-button:hover {
+    background-color:#d9534f;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.8);
+}
+
+/* Styling for the main content section */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the movies list container */
+.search-results {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Styling for individual movie containers */
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(15, 44, 61);
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+/* Styling for movie names */
+.movie-name {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+/* Styling for movie posters */
+.movie-poster {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 1);
+}
+
+/* Styling for movie details */
+.movie-details {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    bottom:5%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.5);
+}
+
+/* Styling for movie detail images */
+.movie-details img {
+    max-width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+/* Styling for the back button in movie details */
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4fd971;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Styling for the favorite movies section */
+.favorite-movies {
+    display: none;
+    margin-top: 10px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.5);
+}
+
+/* Styling for individual favorite movies */
+.favorite-movie {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Styling for favorite movie images */
+.favorite-movie img {
+    width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Styling for favorite movie titles */
+.favorite-movie-title {
+    margin-left: 10px;
+    color: white;
+}
+
+/* Styling for the delete button in favorite movies */
+.favorite-movie-delete {
+    margin-left: auto;
+    cursor: pointer;
+    color: red;
+}
+
+/* Styling for the "Home" button */
+.home-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgba(18, 9, 68, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+.home-button:hover {
+    background-color:#d9534f;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.8);
+}
+
+
+/* Styling for the "Favorites" button */
+.favorites-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(18, 9, 68, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+.favorites-button:hover {
+    background-color:#d9534f;
+    box-shadow: 0px 0px 10px rgba(214, 196, 196, 0.8);
+}
+
+
+/* Styling for the favorite button */
+.favorite-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4fd971;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+/* Styling for the favorite button on hover */
+.favorite-button:hover {
+    background-color: #111311;
+}
+
+/* Media Queries for responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for medium-sized screens */
+    .logo {
+        width: 40px;
+    }
+    .search-input,
+    .search-button {
+        padding: 6px;
+        font-size: 14px;
+    }
+    .main-content {
+        padding: 10% 0;
+    }
+    .search-results {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 5px;
+    }
+    .movie-container {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust styles for small screens */
+    .logo {
+        width: 30px;
+    }
+    .home-button,
+    .favorite-button {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-left: 3px;
+    }
+    .header {
+        padding: 5px;
+    }
+    .search-input,
+    .search-button {
+        padding: 6px;
+        font-size: 12px;
+    }
+    .movie-details {
+        padding: 10px;
+        top: 60%;
+        left: 50%;
+        bottom:5%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    .movie-details img {
+        height: 30%;
+    }
+    .movie-details h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .movie-details p {
+        font-size: 14px;
+    }
+    .back-button {
+        top: 5px;
+        right: 5px;
+        padding: 3px 6px;
+    }
+}

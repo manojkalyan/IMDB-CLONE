@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini IMDB Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background stars effect -->
+    <div class="stars"></div>
+    <div class="content">
+        <!-- Header section -->
+        <header class="header">
+            <!-- IMDb logo -->
+            <img src="images6.png" alt="IMDb Logo" class="logo">
+            <!-- Search form -->
+            <form class="search-form">
+                <input type="text" placeholder="Search movies..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+            <!-- Home button to navigate back to index.html -->
+            <a href="index.html" class="home-button">Home</a>
+            <!-- Button to show favorite movies -->
+            <button class="favorites-button">Favorites</button>
+        </header>
+        <!-- Main content section -->
+        <main class="main-content">
+            <!-- Container for displaying search results -->
+            <div class="search-results">
+                <!-- Placeholder for no movies found message -->
+                <p class="no-movies-found">No movies found. Search above ,"avatar"</p>
+            </div>
+            <!-- Container for displaying movie details -->
+            <div class="movie-details"></div>
+            <!-- Container for displaying favorite movies -->
+            <div class="favorite-movies">
+                <!-- Title for favorite movies section -->
+                <h2>Your Favorite Movies</h2>
+                <!-- Container for listing favorite movies -->
+                <div class="favorite-list"></div>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript file for dynamic functionality -->
+    <script src="./script.js"></script>
+</body>
+</html>
