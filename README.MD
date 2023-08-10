@@ -20,3 +20,9 @@ Usage
 - In the movie details view, click the "Add to Favorites" button to add the movie to your favorites.
 - Click the "Favorites" button in the header to view your list of favorite movies.
 - In the favorite movies view, click the "Delete" button to remove a movie from your favorites.
+
+Images
+
+
+
+
