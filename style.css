@@ -278,8 +278,8 @@ body {
     }
     .search-input,
     .search-button {
-        padding: 6px;
-        font-size: 14px;
+        padding: 5px;
+        font-size: 12px;
     }
     .main-content {
         padding: 10% 0;
@@ -293,22 +293,34 @@ body {
         width: 100%;
         max-width: 300px;
     }
+       .favorites-button {
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-left: auto; 
+        border-radius: 5px;
+        text-decoration: none;
+    }
 }
-
 @media screen and (max-width: 480px) {
     /* Adjust styles for small screens */
     .logo {
         width: 30px;
     }
     .home-button,
+    .favorites-button, /* Add the "favorites-button" class here */
     .favorite-button {
         padding: 6px 12px;
         font-size: 12px;
         margin-left: 3px;
     }
     .header {
+        
         padding: 5px;
+        flex-wrap: wrap; /* Allow items to wrap in the header */
+        justify-content: space-between; /* Adjust alignment */
     }
+    
     .search-input,
     .search-button {
         padding: 6px;
@@ -338,3 +350,5 @@ body {
         padding: 3px 6px;
     }
 }
+
+
